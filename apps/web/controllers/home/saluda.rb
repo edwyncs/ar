@@ -5,7 +5,8 @@ module Web
         include Web::Action
 
         def call(params)
-          status 200, '¡Saludo!'
+          nombre=params[:nombre] || 'Alumno'
+          status 200, "¡Saludos #{nombre}!"
         end
       end
     end
